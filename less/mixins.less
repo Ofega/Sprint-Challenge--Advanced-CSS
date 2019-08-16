@@ -16,17 +16,17 @@
     }
 }
 
-.btn() {
-    // background: @button-bg;
+.btn(@font-size; @padding) {
+    font-size: @font-size;
+    padding: @padding;
+    display: initial;
+    background: @btn-bg-color;
     text-align: center;
-    padding: 1.5rem 1.5rem;
-    border-radius: 15px;
-    font-size: @body-fontSize;
-    max-width: 200px;
-    // color: @main-bg;
+    border-radius: 5px;
+    color: @porcelain;
 
     &:hover {
-        // background: lighten(@button-bg, 20%);
+        background: lighten(@btn-bg-color, 20%);
     }
 
     @media @mobile {

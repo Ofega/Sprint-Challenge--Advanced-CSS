@@ -264,11 +264,16 @@ footer {
   margin-bottom: 26px;
 }
 .home .walk .walk-text .btn {
-  text-align: center;
-  padding: 1.5rem 1.5rem;
-  border-radius: 15px;
   font-size: 1.6rem;
-  max-width: 200px;
+  padding: 0.75em 1em;
+  display: initial;
+  background: #22283A;
+  text-align: center;
+  border-radius: 5px;
+  color: #F6F7F8;
+}
+.home .walk .walk-text .btn:hover {
+  background: #48547a;
 }
 @media (max-width: 750px) {
   .home .walk .walk-text .btn {
