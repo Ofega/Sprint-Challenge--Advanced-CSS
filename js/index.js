@@ -22,11 +22,11 @@ cancelBtn.addEventListener('click', function() {
 });
 
 submitBtn.addEventListener('click', function() {
-    let isFilled;
+    let isFilled = [];
 
     for(let i = 0; i < inputFields.length; i++) {
-        isFilled = inputFields[i].value !== '' ? true : false; 
+        isFilled[i] = inputFields[i].value !== '' ? true : false; 
     }
 
-    isFilled ? openModal(formContainer) : null;
+    isFilled.includes(false) ? null : openModal(formContainer);
 });
