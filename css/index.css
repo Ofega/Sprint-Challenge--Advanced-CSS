@@ -244,9 +244,12 @@ form .input-field label {
 form .input-field input {
   min-height: 40px;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 1px solid #dee2e6;
   outline: none;
   padding: 0 1rem;
+}
+form .input-field input.not-filled {
+  border: 1px solid #FF0000;
 }
 form .form-btns {
   display: flex;

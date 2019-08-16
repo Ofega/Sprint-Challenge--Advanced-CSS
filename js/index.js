@@ -5,10 +5,18 @@ const formContainer = document.querySelector('#formContainer');
 const registerForm = document.querySelector('#registerForm');
 const inputFields = document.querySelectorAll('#formContainer input');
 
+
+//Functions
 function openModal(element) {
     element.classList.toggle("d-none");
 }
 
+function notFilled(element) {
+    element.classList.add('not-filled');
+}
+
+
+//Event Listeners
 registerForm.addEventListener('submit', function(e) {
     e.preventDefault();
 })
@@ -25,7 +33,10 @@ submitBtn.addEventListener('click', function() {
     let isFilled = [];
 
     for(let i = 0; i < inputFields.length; i++) {
-        isFilled[i] = inputFields[i].value !== '' ? true : false; 
+        isFilled[i] = inputFields[i].value !== '' ? true : (function() {
+            notFilled(inputFields[i]);
+            return false;
+        })(); 
     }
 
     isFilled.includes(false) ? null : openModal(formContainer);
