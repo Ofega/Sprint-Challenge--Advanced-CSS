@@ -1,1 +1,47 @@
-// Navigation code here
+// Navigation Styles here
+
+nav {
+    background: @wild-sand;
+    opacity: .9;
+    position: fixed;
+    width: 100%;
+
+    & > div {
+        .flex-container(center, @flex-direction: column);
+        .max-container();
+        padding: @wrapperX;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: @body-fontSize;
+        color: @main-font-color;
+        font-weight: 500;
+        padding: 1.5rem 2rem;
+
+        &:hover {
+            color: lighten(@main-font-color, 20%);
+        }
+
+        @media @phone {
+            padding: 1.5rem 1rem;
+        }
+
+        @media @xSmallPhone {
+            padding: 1.5rem .5rem;
+        }
+
+        &.logo {
+            padding-bottom: 0;
+
+            &:hover {
+                color: @main-font-color;
+            }
+        }
+    }
+}

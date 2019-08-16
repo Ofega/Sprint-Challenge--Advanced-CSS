@@ -1,1 +1,37 @@
-// Mixins Here
+// Mixins in here
+.flex-container(@align-items: initial; @flex-direction: row; @justify-content: initial) {
+    display: flex;
+    align-items: @align-items;
+    flex-direction: @flex-direction;
+    justify-content: @justify-content;
+}
+
+.max-container() {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @phone {
+        max-width: 500px;
+    }
+}
+
+.btn(@font-size; @padding) {
+    font-size: @font-size;
+    padding: @padding;
+    display: initial;
+    background: @btn-bg-color;
+    text-align: center;
+    border-radius: 5px;
+    color: @porcelain;
+
+    &:hover {
+        background: lighten(@btn-bg-color, 20%);
+    }
+
+    @media @phone {
+        display: block;
+        font-size: @font-size * 1.2;
+        padding: 1em 2em;
+    }
+}

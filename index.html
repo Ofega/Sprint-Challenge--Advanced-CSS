@@ -1,9 +1,10 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SpaceWalkers</title>
 
   <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu" rel="stylesheet">
@@ -16,56 +17,107 @@
 
 <body>
 
- <!-- navigation code here -->
+  <nav>
+    <div>
+      <a href="#" class="logo">
+        <h1>SpaceWalkers</h1>
+      </a>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="container home">
 
     <header class="intro">
-       <!-- image code here -->
+      <div>
+        <img src="./img/main-header.png" alt="Main Header Image: Blue Sky">
+      </div>
 
       <h2>Lift Off</h2>
-    
-      <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would fall apart. Seeing this has to change a man.</p>
+
+      <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a
+        marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate,
+        that if you touched it with a finger it would fall apart. Seeing this has to change a man.</p>
     </header>
 
     <section class="space-images">
-        <img src="img/blast.png" class="blast" alt="Rocket blasting off">
-        <img src="img/sky.png" class="sky" alt="Space sky image">
-        <img src="img/launch.png" class="launch" alt="Launching rocket">
+      <img src="img/blast.png" class="blast" alt="Rocket blasting off">
+      <img src="img/sky.png" class="sky" alt="Space sky image">
+      <img src="img/launch.png" class="launch" alt="Launching rocket">
     </section>
-   
+
     <section class="visit-planets">
-     
       <h3>Can We Visit Planets?</h3>
-    
-      <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet.</p>
-    
-      <p>Which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it.</p>
+
+      <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe,
+        having the qualities of a globe, a round earth in which all the directions eventually meet.</p>
+
+      <p>Which there is no center because every point, or none, is center — an equal earth which all men occupy as
+        equals. The airman's earth, if free men make it.</p>
     </section>
-    
+
     <section class="walk">
       <div class="walk-text">
         <h3>Let's Go For A Walk</h3>
 
-        <p>The Earth was small, light blue, and so touchingly alone, our home that must be defended like a holy relic. The Earth was absolutely round.</p>
-      
-        <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
-      
-        <div class="btn">
+        <p>The Earth was small, light blue, and so touchingly alone, our home that must be defended like a holy relic.
+          The Earth was absolutely round.</p>
+
+        <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye,
+          and my thumb blotted out the planet Earth.</p>
+
+        <div class="btn" id="registerBtn">
           Sign Up
         </div>
       </div>
-      
-      <div class="walk-img">
-          <img src="img/space-walk.png" alt="Space walking astronaut">
-      </div>
 
+      <div class="walk-img">
+        <img src="img/space-walk.png" alt="Space walking astronaut">
+      </div>
     </section>
+
+    <div class="register-modal d-none" id="formContainer">
+      <form id="registerForm">
+        <div>
+          <div class="input-field">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName">
+          </div>
+          <div class="input-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+          </div>
+          <div class="input-field">
+            <label for="emailAddress">Email</label>
+            <input type="email" name="emailAddress" id="emailAddress">
+          </div>
+          <div class="input-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" name="phoneNumber" id="phoneNumber">
+          </div>
+
+          <div class="form-btns">
+            <button type="button" class="btn" id="submitBtn">Sign Up</button>
+            <button type="button" class="btn" id="cancelBtn">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <footer>
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
 
   </div>
+
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
