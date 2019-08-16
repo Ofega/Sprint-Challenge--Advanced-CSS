@@ -11,7 +11,7 @@
     width: 100%;
     margin: 0 auto;
 
-    @media @mobile {
+    @media @phone {
         max-width: 500px;
     }
 }
@@ -29,7 +29,9 @@
         background: lighten(@btn-bg-color, 20%);
     }
 
-    @media @mobile {
-        max-width: 100%;
+    @media @phone {
+        display: block;
+        font-size: @font-size * 1.2;
+        padding: 1em 2em;
     }
 }
