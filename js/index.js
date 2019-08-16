@@ -23,6 +23,9 @@ registerForm.addEventListener('submit', function(e) {
 
 registerBtn.addEventListener('click', function() {
     openModal(formContainer);
+    for(let i = 0; i < inputFields.length; i++) {
+        inputFields[i].value = '';
+    }
 });
 
 cancelBtn.addEventListener('click', function() {
