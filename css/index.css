@@ -220,6 +220,67 @@ nav a.logo {
 nav a.logo:hover {
   color: #5E6164;
 }
+form {
+  background: #F1F1F1;
+  padding: 2.5rem;
+  opacity: 1;
+  width: 100%;
+  border-radius: 5px;
+  max-width: 500px;
+}
+form .input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+form .input-field label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+form .input-field input {
+  min-height: 40px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 1rem;
+}
+form .form-btns {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+form .form-btns .btn {
+  font-size: 1.3rem;
+  padding: 1em;
+  display: initial;
+  background: #22283A;
+  text-align: center;
+  border-radius: 5px;
+  color: #F6F7F8;
+  border: none;
+  outline: none;
+  width: calc(50% - 15px);
+}
+form .form-btns .btn:hover {
+  background: #48547a;
+}
+@media (max-width: 750px) {
+  form .form-btns .btn {
+    display: block;
+    font-size: 1.56rem;
+    padding: 1em 2em;
+  }
+}
+@media (max-width: 750px) {
+  form .form-btns .btn {
+    width: 100%;
+  }
+}
 footer {
   color: #81848E;
   background: #F6F6F6;
@@ -336,4 +397,20 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.home .register-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .d-none {
+  display: none;
 }

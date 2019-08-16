@@ -1,0 +1,48 @@
+
+form {
+    background: @sea-shell;
+    padding: 2.5rem;
+    opacity: 1;
+    width: 100%;
+    border-radius: 5px;
+    max-width: 500px;
+
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        width: 100%;
+
+        label {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+            color: @black;
+        }
+          
+        input {
+            min-height: 40px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            outline: none;
+            padding: 0 1rem;
+        }
+    }
+
+    .form-btns {
+        .flex-container(center, @justify-content: space-between);
+
+        .btn {
+            .btn(1.3rem, 1em);
+            border: none;
+            outline: none;
+            width: calc(50% - 15px);
+
+            @media @phone {
+                width: 100%;
+            }
+        }
+    }
+    
+}

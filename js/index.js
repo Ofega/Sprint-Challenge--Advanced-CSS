@@ -1,0 +1,32 @@
+const registerBtn = document.querySelector('#registerBtn');
+const cancelBtn = document.querySelector('#cancelBtn');
+const submitBtn = document.querySelector('#submitBtn');
+const formContainer = document.querySelector('#formContainer');
+const registerForm = document.querySelector('#registerForm');
+const inputFields = document.querySelectorAll('#formContainer input');
+
+function openModal(element) {
+    element.classList.toggle("d-none");
+}
+
+registerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+})
+
+registerBtn.addEventListener('click', function() {
+    openModal(formContainer);
+});
+
+cancelBtn.addEventListener('click', function() {
+    openModal(formContainer);
+});
+
+submitBtn.addEventListener('click', function() {
+    let isFilled;
+
+    for(let i = 0; i < inputFields.length; i++) {
+        isFilled = inputFields[i].value !== '' ? true : false; 
+    }
+
+    isFilled ? openModal(formContainer) : null;
+});
