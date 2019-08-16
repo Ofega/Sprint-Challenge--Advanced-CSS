@@ -36,6 +36,10 @@ form {
 
     .form-btns {
         .flex-container(center, @justify-content: space-between);
+        
+        @media @phone {
+            flex-direction: column;
+        }
 
         .btn {
             .btn(1.3rem, 1em);
@@ -45,6 +49,10 @@ form {
 
             @media @phone {
                 width: 100%;
+
+                &:last-of-type {
+                    margin-top: 20px;
+                }
             }
         }
     }

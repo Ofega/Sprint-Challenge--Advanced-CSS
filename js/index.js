@@ -25,6 +25,10 @@ registerBtn.addEventListener('click', function() {
     openModal(formContainer);
     for(let i = 0; i < inputFields.length; i++) {
         inputFields[i].value = '';
+        
+        if(inputFields[i].classList.contains('not-filled')) {
+            inputFields[i].classList.remove('not-filled');
+        }
     }
 });
 
