@@ -145,6 +145,9 @@ h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293B;
 }
+h1 {
+  font-size: 4rem;
+}
 h2 {
   font-size: 3.2rem;
 }
@@ -159,22 +162,70 @@ p {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (max-width: 750px) {
+  .container {
+    max-width: 500px;
+  }
+}
+nav {
+  background: #F6F6F6;
+}
+nav > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: initial;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (max-width: 750px) {
+  nav > div {
+    max-width: 500px;
+  }
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #5E6164;
+  font-weight: 500;
+  padding: 1.5rem 2rem;
+}
+nav a:hover {
+  color: #919497;
+}
+nav a.logo {
+  padding-bottom: 0;
+}
+nav a.logo:hover {
+  color: #5E6164;
 }
 footer {
-  color: #22283B;
-  background: #f4f4f4;
+  color: #81848E;
+  background: #F6F6F6;
   padding: 20px 0;
-  border: 1px double #e0e0e0;
+  border: 1px double #F1F1F1;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  border-radius: 5px;
 }
 .home .space-images {
   display: flex;
@@ -211,6 +262,18 @@ footer {
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  text-align: center;
+  padding: 1.5rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  max-width: 200px;
+}
+@media (max-width: 750px) {
+  .home .walk .walk-text .btn {
+    max-width: 100%;
+  }
 }
 .home .walk .walk-img {
   width: 46%;
