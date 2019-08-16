@@ -171,6 +171,9 @@ p {
 }
 nav {
   background: #F6F6F6;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
 }
 nav > div {
   display: flex;
@@ -227,6 +230,9 @@ footer {
   align-items: center;
   flex-direction: row;
   justify-content: center;
+}
+.home .intro {
+  padding-top: 100px;
 }
 .home .intro h2 {
   padding: 15px;
